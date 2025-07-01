@@ -1,0 +1,77 @@
+body {
+  background: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.process-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 32px;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.circle.idea {
+  background: #f75c5c;
+}
+.circle.prototype {
+  background: #3fd0ea;
+}
+.circle.coding {
+  background: #4fd269;
+}
+.circle.testing {
+  background: #b97cf7;
+}
+
+.icon {
+  font-size: 48px;
+  color: #fff;
+  user-select: none;
+}
+
+.label {
+  font-size: 22px;
+  color: #888;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.arrow {
+  font-size: 40px;
+  color: #bbb;
+  margin: 0 8px;
+  user-select: none;
+}
+
+@media (max-width: 900px) {
+  .process-container {
+    flex-direction: column;
+    gap: 24px;
+    min-height: unset;
+    padding: 40px 0;
+  }
+  .arrow {
+    transform: rotate(90deg);
+    margin: 8px 0;
+  }
+}

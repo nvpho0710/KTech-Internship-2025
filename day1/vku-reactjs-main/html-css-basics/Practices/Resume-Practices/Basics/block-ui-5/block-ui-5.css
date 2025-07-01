@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  width: 100vw;
+  height: 110px;
+}
+
+.nav-item {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  height: 110px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: filter 0.2s;
+}
+
+.nav-item.home {
+  background: #2ed2e6;
+}
+.nav-item.about {
+  background: #fa5a5a;
+}
+.nav-item.feature {
+  background: #4be167;
+}
+.nav-item.service {
+  background: #ffe03a;
+  color: #fff;
+}
+.nav-item.gallery {
+  background: #fa925a;
+}
+.nav-item.blog {
+  background: #ff5af7;
+}
+
+.nav-item:hover {
+  filter: brightness(0.95) contrast(1.1);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+  }
+  .nav-item {
+    height: 56px;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+}

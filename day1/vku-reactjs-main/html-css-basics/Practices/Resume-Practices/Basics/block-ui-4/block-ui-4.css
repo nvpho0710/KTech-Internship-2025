@@ -1,0 +1,149 @@
+body {
+  background: #f5f8fc;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  width: 300px;
+  padding: 0 0 24px 0;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.profile-card:hover {
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.14);
+}
+
+.profile-img {
+  width: 90%;
+  height: 200px;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #888;
+  margin-top: 18px;
+  letter-spacing: 1px;
+}
+.profile-role {
+  font-size: 15px;
+  color: #b0b0b0;
+  margin-bottom: 18px;
+}
+
+.profile-info-list {
+  margin: 0 32px 18px 32px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+.profile-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #b0b0b0;
+  font-size: 15px;
+  margin: 6px 0;
+}
+.profile-info .icon {
+  margin-right: 10px;
+  color: #b0b0b0;
+  font-size: 17px;
+  width: 22px;
+  display: inline-block;
+  text-align: left;
+}
+.profile-info span {
+  min-width: unset;
+}
+.profile-info .label {
+  margin-left: 2px;
+  margin-right: 0;
+  font-weight: 400;
+}
+.profile-info .info-right {
+  margin-left: auto;
+  color: #b0b0b0;
+  font-weight: 500;
+  text-align: right;
+}
+.profile-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.profile-contact {
+  margin: 18px 32px 0 32px;
+  border-radius: 4px;
+  padding: 14px 0 10px 0;
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+}
+.profile-contact .contact-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 18px;
+  margin-bottom: 2px;
+}
+.profile-contact .contact-value {
+  font-size: 16px;
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-contact.email.red {
+  background: #f44336;
+}
+.profile-contact.phone.green {
+  background: #4cd964;
+}
+.profile-contact.email.blue {
+  background: #00bcd4;
+}
+.profile-contact.phone.blue2 {
+  background: #5c6bc0;
+}
+
+@media (max-width: 900px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .profile-card {
+    width: 90vw;
+    max-width: 350px;
+  }
+}

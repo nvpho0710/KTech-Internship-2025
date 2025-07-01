@@ -1,0 +1,97 @@
+body {
+  background: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 44px;
+}
+
+.card {
+  width: 300px;
+  height: 340px;
+  border-radius: 4px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 36px 0 0 36px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.2s;
+}
+
+.card .icon {
+  font-size: 60px;
+  margin-bottom: 60px;
+  opacity: 0.95;
+}
+
+.card .title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.card .desc {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.facebook {
+  background: #5d9cec;
+}
+.twitter {
+  background: #3bc3e9;
+}
+.google {
+  background: #f47c4c;
+}
+.pinterest {
+  background: #f5515f;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .card {
+    width: 260px;
+    height: 280px;
+    padding-left: 24px;
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .card {
+    width: 90vw;
+    max-width: 340px;
+    height: 200px;
+    padding-left: 18px;
+    padding-top: 18px;
+  }
+  .card .icon {
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+  .card .title {
+    font-size: 1.3rem;
+  }
+  .card .desc {
+    font-size: 1rem;
+  }
+}

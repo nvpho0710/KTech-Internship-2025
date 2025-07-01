@@ -1,0 +1,90 @@
+body {
+  background: #f5f8fc;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.stat-block {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+  width: 260px;
+  padding: 32px 0 0 0;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.stat-block:hover {
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+}
+
+.stat-title {
+  color: #666;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  color: #3ec6e0;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.stat-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 60px;
+  margin: 0 24px 0 24px;
+  margin-bottom: 8px;
+}
+
+.bar {
+  width: 22px;
+  border-radius: 4px 4px 0 0;
+  background: #eee;
+  position: relative;
+  margin: 0 2px;
+  transition: background 0.2s;
+}
+.bar-red {
+  background: #ff5e5e;
+}
+.bar-green {
+  background: #4cd964;
+}
+.bar-yellow {
+  background: #ffd600;
+}
+.bar-blue {
+  background: #3ec6e0;
+}
+.bar-orange {
+  background: #ff8c42;
+}
+
+.stat-labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 24px 24px 24px;
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 1px;
+}
+.stat-labels span {
+  width: 22px;
+  text-align: center;
+}
