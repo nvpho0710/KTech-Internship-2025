@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <div>
+            <li id="item1">dong 1
+            </li>
+            <button id="deleteitem1">xoá</button>
+        </div>
+        <div>
+            <li id="item2">dong 2
+            </li>
+            <button id="deleteitem2">xoá</button>
+        </div>
+        <div>
+            <li id="item3">dong 3
+            </li>
+            <button id="deleteitem3">xoá</button>
+        </div>
+        <div>
+            <li id="item4">dong 4
+            </li>
+            <button id="deleteitem4">xoá</button>
+        </div>
+    </ul>
+    <script>
+        document.getElementById('deleteitem1').addEventListener('click',function(){
+            document.getElementById('item1').remove();
+            document.getElementById('deleteitem1').remove();
+        })
+        document.getElementById('deleteitem2').addEventListener('click',function(){
+            document.getElementById('item2').remove();
+            document.getElementById('deleteitem2').remove();
+        })
+        document.getElementById('deleteitem3').addEventListener('click',function(){
+            document.getElementById('item3').remove();
+            document.getElementById('deleteitem3').remove();
+        })
+        document.getElementById('deleteitem4').addEventListener('click',function(){
+            document.getElementById('item4').remove();
+            document.getElementById('deleteitem4').remove();
+        })
+    </script>
+</body>
+</html>

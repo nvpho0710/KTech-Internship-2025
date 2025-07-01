@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hoverBox" style="width: 100px; height: 100px; background-color: pink;"></div>
+    <style>
+      .hoverBox.active {
+        background-color: lightblue !important;
+      }
+    </style>
+    <script>
+      const box = document.querySelector('.hoverBox');
+      box.addEventListener('mouseenter', function() {
+        box.classList.add('active');
+      });
+      box.addEventListener('mouseleave', function() {
+        box.classList.remove('active');
+      });
+    </script>
+</body>
+</html>

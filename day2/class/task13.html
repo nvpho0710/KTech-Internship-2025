@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field Border Highlight on Error</title>
+  <style>
+    #nameInput.error {
+      border: 2px solid red;
+    }
+    #nameError {
+      color: red;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="nameInput" placeholder="Nhập tên">
+  <button id="formSubmit">Gửi</button>
+  <div id="nameError"></div>
+  <script>
+    document.getElementById('formSubmit').addEventListener('click', function() {
+      const nameInput = document.getElementById('nameInput');
+      const errorDiv = document.getElementById('nameError');
+      if (nameInput.value.trim() === '') {
+        nameInput.classList.add('error');
+        errorDiv.textContent = 'Vui lòng nhập tên!';
+      } else {
+        nameInput.classList.remove('error');
+        errorDiv.textContent = '';
+      }
+    });
+  </script>
+</body>
+</html>

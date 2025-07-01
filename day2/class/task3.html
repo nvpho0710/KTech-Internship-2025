@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="itemInput" placeholder="Nhập nội dung">
+    <button id="addItemBtn">Thêm mục</button>
+    <ul id="itemList"></ul>
+    <script>
+      document.getElementById('addItemBtn').addEventListener('click', function() {
+        const input = document.getElementById('itemInput');
+        const value = input.value.trim();
+        if (value) {
+          const li = document.createElement('li');
+          li.textContent = value;
+          document.getElementById('itemList').appendChild(li);
+          input.value= "";
+        }
+      });
+    </script>
+</body>
+</html>

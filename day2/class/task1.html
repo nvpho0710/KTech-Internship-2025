@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="changeTextBtn">Change Text</button>
+        <div id="textDisplay">This is the original text.</div>
+    </div>
+    <script>
+        document.getElementById('changeTextBtn').addEventListener('click', function() {
+        document.getElementById('textDisplay').textContent = 'Hello, JavaScript!';});
+    </script>
+</body>
+</html>

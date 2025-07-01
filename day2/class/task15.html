@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Textarea Character Counter</title>
+  <style>
+    #charCount {
+      font-size: 1em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="bioInput" rows="4" cols="40" maxlength="200" placeholder="  nhap vao toi da 200 ky tu..."></textarea>
+  <p id="charCount">còn 200 ký tự</p>
+  <script>
+    const textarea = document.getElementById('bioInput');
+    const charCount = document.getElementById('charCount');
+    textarea.addEventListener('input', function() {
+      const remaining = 200 - textarea.value.length;
+      charCount.textContent = `còn  ${remaining} ký tự`;
+    });
+  </script>
+</body>
+</html>

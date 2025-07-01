@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="usernameInput" placeholder="nhap ten nguoi dung">
+    <button id="submitUserName">nhap ten</button>
+    <script>
+        document.getElementById('submitUserName').addEventListener('click',function(){
+            const username = document.getElementById('usernameInput').value.trim();
+            if(username){
+                alert('xin chao' + ' ' +username)
+            } else{
+                alert('vui long nhap ten nguoi dung');
+            }
+            }
+        )
+    </script>
+</body>
+</html>
