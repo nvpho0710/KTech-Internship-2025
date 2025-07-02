@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  padding: 16px 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  width: 370px;
+  gap: 18px;
+  background: #00c3e3; /* default, can be overridden by prop */
+  transition: background 0.2s;
+}
+.avatars {
+  display: flex;
+  align-items: center;
+  gap: -12px;
+}
+.avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+}
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 18px;
+}
+.title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff;
+}
+.subtitle {
+  font-size: 1rem;
+  color: #f3f3f3;
+  margin-top: 2px;
+}
+
+/* Color variants */
+.cyan { background: #00c3e3; }
+.purple { background: #8d2fff; }
+.yellow { background: #ffe600; color: #222; }
+.yellow .title { color: #222; }
+.yellow .subtitle { color: #444; }

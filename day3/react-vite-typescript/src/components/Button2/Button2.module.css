@@ -1,0 +1,53 @@
+.textfield {
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  height: 48px;
+  margin: 16px 0;
+  font-size: 18px;
+  color: #222;
+  border: none;
+  outline: none;
+  width: 320px;
+  box-sizing: border-box;
+  font-weight: 400;
+  transition: background 0.2s;
+}
+.textfield:focus {
+  background: #f3f6f8;
+}
+.textfield__icon {
+  margin-right: 12px;
+  font-size: 22px;
+  color: #222;
+}
+.textfield__right {
+  margin-left: auto;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+.textfield--green {
+  background: #e6f9ed;
+}
+.textfield--yellow {
+  background: #fff9e6;
+}
+.textfield__input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  flex: 1;
+  color: #222;
+}
+.textfield__input::placeholder {
+  color: #b0b0b0;
+  font-weight: 400;
+}
+.textfield__input.bold {
+  font-weight: 700;
+  color: #222;
+}
