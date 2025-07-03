@@ -1,0 +1,42 @@
+.ratingWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+.label {
+  font-size: 1.1rem;
+  color: #222;
+}
+.stars {
+  display: flex;
+  gap: 2px;
+}
+.star {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.star.active {
+  color: #ff9800;
+}
+.result {
+  margin-left: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #4caf50;
+  border-radius: 6px;
+  padding: 2px 12px;
+  display: inline-block;
+}
+.result.normal {
+  background: #4caf50;
+}
+.result.bad {
+  background: #f44336;
+}
+.result.good {
+  background: #2196f3;
+}
