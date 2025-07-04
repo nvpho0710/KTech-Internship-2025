@@ -1,0 +1,15 @@
+.blockChart {
+    padding: 0;
+    flex-basis: 22%;
+    background: #fff;
+    margin: 10px 0;
+    box-shadow: 0 0 10px #e6e7e8;
+  }
+ 
+.blockChart__column {
+      display: flex;
+      background-color: #fafafa;
+     justify-content: center;
+     padding: 20px 0;
+     border-top:1px solid #f1f1f1
+  }

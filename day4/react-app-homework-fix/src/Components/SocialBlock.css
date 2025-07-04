@@ -1,0 +1,44 @@
+
+.socialCard--wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .socialCard--wraper>div {
+    flex-basis: 22%;
+    margin: 10px 0;
+  }
+  
+  /* PC, Tablet */
+  @media (min-width: 740px) {
+    .socialCard--wraper {
+        flex-direction: row;
+        flex-wrap:wrap
+    }
+  }
+  
+.socialCard {
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    border-top: 3px solid rgba(0,0,0,0.2);
+}
+.socialCard__item{
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    align-content:flex-end
+}
+.socialCard__icon{
+    flex: 1;
+}
+
+
+.socialCard__name {
+    font-size: 26px;
+}
+.socialCard__count {
+    font-size:12px;
+}

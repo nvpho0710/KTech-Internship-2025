@@ -1,0 +1,17 @@
+ 
+.blockChart__info {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.blockChart__text {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #888;
+
+}
+.blockChart__total {
+    font-size: 32px;
+    color: #80CFDA;
+}

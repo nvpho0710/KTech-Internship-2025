@@ -1,0 +1,19 @@
+.person__avatar{
+    display: block;
+}
+.person_profile_photo {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    border:1px solid #ececec;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.person_profile_photo img{
+    width: 100%;
+    height: auto;
+    border-radius: 200px;
+}

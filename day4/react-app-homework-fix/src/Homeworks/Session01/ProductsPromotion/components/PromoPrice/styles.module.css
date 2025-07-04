@@ -1,0 +1,20 @@
+.promo_item_price {
+    margin: 5px 0;
+}
+.promo_item_price strong{
+    color: #77A31B;
+}
+.promo_item_price del{
+    font-size: 12px;
+    color: #888;
+    margin-left: 5px;
+}
+.promo_item_price .promo_item_discount{
+    position: unset;
+}
+.promo_item_price em{
+    font-size: 12px;
+    color: #F24604;
+    margin-left: 5px;
+    font-style: normal;
+}

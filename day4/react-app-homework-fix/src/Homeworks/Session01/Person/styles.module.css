@@ -1,0 +1,9 @@
+.card {
+    padding: 20px;
+    flex-basis: 22%;
+    background: #fff;
+    margin: 10px 0;
+    box-shadow: 0 0 10px #e6e7e8;
+    box-sizing: border-box;
+}
+

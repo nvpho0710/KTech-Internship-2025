@@ -1,0 +1,12 @@
+
+.products_item_price {
+    margin: 5px 0;
+}
+.products_item_price strong{
+    color: #555;
+}
+.products_item_price del{
+    font-size: 12px;
+    color: #888;
+    margin-left: 5px;
+}

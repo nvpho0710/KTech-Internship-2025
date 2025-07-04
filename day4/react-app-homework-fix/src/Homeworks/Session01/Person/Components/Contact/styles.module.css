@@ -1,0 +1,23 @@
+
+.person_contacts {
+    margin: 10px 0 0;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px #e6e7e8;
+}
+
+.person_contacts p{
+    margin: 0;
+    padding: 5px 0;
+    line-height: 22px;
+}
+
+.person_contacts p span{
+    line-height: 16px;
+    padding: 0;
+}
+.person_contacts_type {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+}

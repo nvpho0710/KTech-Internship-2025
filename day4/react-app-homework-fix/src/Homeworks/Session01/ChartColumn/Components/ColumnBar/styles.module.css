@@ -1,0 +1,38 @@
+.blockChart__item {
+    text-align: center;
+    padding: 0 5px;
+}
+
+  .blockChart__bar {
+      width: 15px;
+      background-color: #fff;
+      border:1px solid #f1f1f1;
+      height: 50px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+  }
+  .blockChart__percent{
+      height: 20%;
+      background-color: #f1f1f1;
+      vertical-align: bottom;
+  }
+  .blockChart__item:nth-child(1) .blockChart__percent{
+    background-color: #F65150;
+}
+.blockChart__item:nth-child(2) .blockChart__percent{
+    background-color: #51D567;
+}
+.blockChart__item:nth-child(3) .blockChart__percent{
+    background-color: #FCD518;
+}
+.blockChart__item:nth-child(4) .blockChart__percent{
+    background-color: #30C8DB;
+}
+.blockChart__item:nth-child(5) .blockChart__percent{
+    background-color: #F58255;
+}
+  .blockChart__day {
+      font-size: 12px;
+  }

@@ -1,0 +1,30 @@
+.chartbar {
+    display: flex;
+    margin:10px;
+   
+}
+.chartbar__item {
+
+    font-weight: bold;
+    color: #fff;
+}
+
+.chartbar--label {
+    min-width: 120px;
+    text-transform: uppercase;
+    text-align: right;
+    padding: 10px; 
+}
+
+.chartbar--value {
+    display: flex;
+    background: #fafafa;
+    flex:1
+}
+.chartbar__item--dynamic {
+    padding: 10px;
+}
+.chartbar--line {
+ flex:1
+}
+

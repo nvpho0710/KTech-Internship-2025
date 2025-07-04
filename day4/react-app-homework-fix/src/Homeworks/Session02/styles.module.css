@@ -1,0 +1,27 @@
+
+  .section__title {
+   font-size: 28px;
+   margin: 20px 0;
+   line-height: 30px;
+   font-weight: bold;
+  } 
+  
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+.row .col_50{
+  flex-basis: 49%;
+}
+
+@media (max-width: 799px) {
+  .row {
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+  .row .col_50 {
+    flex: 1;
+    flex-basis: 100%;
+  }
+  
+}

@@ -1,0 +1,9 @@
+
+/* Price */
+
+.promo_item_price {
+    margin: 5px 0;
+}
+.products_item_price strong{
+    color: #77A31B;
+}

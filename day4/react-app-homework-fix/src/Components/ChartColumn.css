@@ -1,0 +1,84 @@
+
+.blockChart--wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #f1f1f1;
+    padding: 20px 0;
+  }
+  
+  .blockChart--wraper>div {
+    padding: 0;
+    flex-basis: 22%;
+    background: #fff;
+    margin: 10px 0;
+    box-shadow: 0 0 10px #e6e7e8;
+  }
+.blockChart__info {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.blockChart__text {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #888;
+
+}
+.blockChart__total {
+    font-size: 32px;
+    color: #80CFDA;
+}
+.blockChart__column {
+      display: flex;
+      background-color: #fafafa;
+     justify-content: center;
+     padding: 20px 0;
+     border-top:1px solid #f1f1f1
+  }
+.blockChart__item {
+    text-align: center;
+    padding: 0 5px;
+}
+
+  .blockChart__bar {
+      width: 15px;
+      background-color: #fff;
+      border:1px solid #f1f1f1;
+      height: 50px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+  }
+  .blockChart__percent{
+      height: 20%;
+      background-color: #f1f1f1;
+      vertical-align: bottom;
+  }
+  .blockChart__item:nth-child(1) .blockChart__percent{
+    background-color: #F65150;
+}
+.blockChart__item:nth-child(2) .blockChart__percent{
+    background-color: #51D567;
+}
+.blockChart__item:nth-child(3) .blockChart__percent{
+    background-color: #FCD518;
+}
+.blockChart__item:nth-child(4) .blockChart__percent{
+    background-color: #30C8DB;
+}
+.blockChart__item:nth-child(5) .blockChart__percent{
+    background-color: #F58255;
+}
+  .blockChart__day {
+      font-size: 12px;
+  }
+  /* PC, Tablet */
+  @media (min-width: 740px) {
+    .blockChart--wraper {
+        flex-direction: row;
+        flex-wrap:wrap
+    }
+  }

@@ -1,0 +1,13 @@
+.person__profile{
+    display: block;
+}
+.person_profile_name {
+    text-align:center;
+    text-transform: uppercase;
+    color: #555;
+    margin: 10px auto;
+}
+.person_profile_position {
+    text-align:center;
+    color: #888;
+}

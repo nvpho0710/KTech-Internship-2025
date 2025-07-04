@@ -1,0 +1,53 @@
+
+.skills {
+    display: flex;
+    margin:20px 10px;
+   
+}
+
+.skills-label {
+    min-width: 120px;
+    display: flex;
+}
+
+.skills-label .skills-label-icon {
+    color: #fff;
+    background-color: #ddd;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 10px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.skills-label .skills-label-name {
+    color: #444;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+.skills-chart {
+    display: flex;
+    background: #ddd;
+    flex:1;
+    height: 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.skills-chart__item {
+    padding: 0;
+    display: inline-block;
+    margin: 0;
+}
+.skills-chart--percent {
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+
+.skills-chart--line {
+    border-radius: 0 5px 5px 0;
+}

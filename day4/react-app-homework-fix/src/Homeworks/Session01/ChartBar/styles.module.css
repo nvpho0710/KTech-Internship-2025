@@ -1,0 +1,29 @@
+.chartbar {
+    display: flex;
+    margin:10px;
+   
+}
+
+.chartbar__label {
+    min-width: 120px;
+    text-transform: uppercase;
+    text-align: right;
+    padding: 10px; 
+    font-weight: bold;
+    color: #fff;
+}
+
+.chartbar__value {
+    display: flex;
+    background: #fafafa;
+    flex:1;
+    font-weight: bold;
+    color: #fff;
+}
+.chartbar__percent {
+    padding: 10px;
+}
+.chartbar--line {
+ flex:1
+}
+

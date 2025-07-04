@@ -1,0 +1,15 @@
+.products_item_attr {
+    color: #666;
+    margin: 10px 0;
+}
+.products_item_attr>span{
+    display: inline-block;
+    font-size: 12px;
+}
+.products_item_attr>span::after{
+    content: "/";
+    padding: 0 5px;
+}
+.products_item_attr>span:last-child::after{
+    content: "";
+}

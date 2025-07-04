@@ -1,0 +1,19 @@
+
+.next {
+    padding: 10px;
+    background-color: #ddd;
+    color: #222;
+    border-radius: 3px;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    position: absolute;
+    z-index: 1;
+    top: 48%;
+    cursor: pointer;
+}
+
+.next {
+    right: 10px;
+}
