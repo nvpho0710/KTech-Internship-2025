@@ -1,0 +1,234 @@
+/* Styles for the login form UI */
+.formui-bg {
+  min-height: 100vh;
+  background: #f8c6c6 url('images/background.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.formui-container {
+  background: rgba(0,0,0,0.10); /* Lower opacity for background image visibility */
+  border-radius: 2rem;
+  width: 350px;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  position: relative;
+}
+
+.formui-back-btn {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.formui-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 2.5rem;
+}
+
+/* Title for Sign up and Log in */
+.formui-title {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 45px;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+/* Description text for Sign up */
+.formui-desc {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Password toggle button */
+.formui-password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #1ed290;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Agree button for Sign up */
+.formui-agree-btn {
+  background: #1ed290;
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+.formui-agree-btn:hover {
+  background: #17b87a;
+}
+
+/* Terms and policy text */
+.formui-terms {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin: 0.7rem 0 0.2rem 0;
+}
+.formui-terms a {
+  color: #1ed290;
+  text-decoration: underline;
+}
+
+/* User info for Log in */
+.formui-user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 140px;
+}
+.formui-avatar {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background: #222;
+  background-size: cover;
+  background-position: center;
+}
+.formui-user-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.formui-user-email {
+  color: #aaa;
+  font-size: 0.98rem;
+}
+
+.formui-hi {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.formui-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formui-input {
+  padding: 0.9rem 1rem;
+  border-radius: 0.7rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: #222;
+  color: #fff;
+}
+
+.formui-continue-btn {
+  background: #1ed290;
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.formui-continue-btn:hover {
+  background: #17b87a;
+}
+
+.formui-or {
+  color: #aaa;
+  text-align: center;
+  margin: 1.2rem 0 0.7rem 0;
+  font-size: 1rem;
+}
+
+.formui-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.formui-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.formui-social-btn.fb {
+  border: 1.5px solid #1877f3;
+}
+.formui-social-btn.google {
+  border: 1.5px solid #ea4335;
+}
+.formui-social-btn.apple {
+  border: 1.5px solid #222;
+}
+.formui-social-btn:hover {
+  background: #f0f0f0;
+}
+
+.formui-social-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+}
+
+.formui-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+  font-size: 0.98rem;
+}
+.formui-signup {
+  color: #1ed290;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.3rem;
+}
+.formui-signup:hover {
+  text-decoration: underline;
+}
+.formui-forgot {
+  color: #1ed290;
+  text-decoration: none;
+  margin-top: 0.2rem;
+}
+.formui-forgot:hover {
+  text-decoration: underline;
+}
+span{
+    color: #fff;
+}

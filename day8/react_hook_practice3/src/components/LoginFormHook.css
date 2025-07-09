@@ -1,0 +1,250 @@
+/* LoginFormHook.css */
+.login-page-root {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f7fa;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.login-left {
+  flex: 1.2;
+  background: #eaf1f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-left-content {
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #232b38;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+}
+
+.login-hexagon-bg {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  margin: 0 auto;
+}
+
+.main-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 270px;
+  height: 340px;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.hexagon {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+  z-index: 1;
+  opacity: 0.8;
+}
+.hex1 {
+  left: 0;
+  top: 60px;
+  background: #ffe07a;
+}
+.hex2 {
+  left: 60px;
+  top: -30px;
+  background: #f7b6b6;
+}
+.hex3 {
+  right: 0;
+  top: 60px;
+  background: #f7b6b6;
+}
+.hex4 {
+  left: 30px;
+  bottom: 0;
+  background: #ffe07a;
+}
+.hex5 {
+  right: 30px;
+  bottom: 0;
+  background: #b6e0f7;
+}
+
+.login-right {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 400px;
+  box-shadow: -2px 0 16px 0 rgba(0,0,0,0.04);
+}
+
+.login-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d94f2b;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.login-form-container {
+  width: 350px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.06);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.login-form-title {
+  color: #d94f2b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.login-form-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #232b38;
+  margin-bottom: 0.5rem;
+}
+
+.login-form-desc {
+  font-size: 0.95rem;
+  color: #6b7683;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.login-label {
+    display: flex;
+  font-size: 0.95rem;
+  color: #232b38;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.login-input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 0.5rem;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+.login-input:focus {
+  border: 1.5px solid #d94f2b;
+}
+
+.login-form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #232b38;
+  gap: 0.3rem;
+}
+
+.reset-password {
+  color: #d94f2b;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+.reset-password:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background: #d94f2b;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 0;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.login-btn:hover {
+  background: #b03c1e;
+}
+
+.login-form-footer {
+  text-align: center;
+  font-size: 1rem;
+  color: #232b38;
+}
+
+.join-link {
+  color: #d94f2b;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.2rem;
+}
+.join-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .login-page-root {
+    flex-direction: column;
+  }
+  .login-left, .login-right {
+    min-width: unset;
+    width: 100%;
+    flex: unset;
+  }
+  .login-left-content {
+    width: 100%;
+    max-width: 100vw;
+    padding: 2rem 0;
+  }
+  .login-form-container {
+    width: 100%;
+    min-width: unset;
+    max-width: 100vw;
+  }
+  .login-hexagon-bg {
+    width: 250px;
+    height: 250px;
+  }
+  .main-img {
+    width: 170px;
+    height: 210px;
+  }
+}
