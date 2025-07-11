@@ -75,9 +75,16 @@ export default function CreateTaskPage() {
   });
 
   const onSubmit: SubmitHandler<IFormInput> = async (data: any) => {
-    console.log('Form submitted:', data);
+    // Chuyển assignee_id sang number nếu có, loại bỏ trường rỗng
+    const payload = {
+      ...data,
+      assignee_id: data.assignee_id ? Number(data.assignee_id) : undefined,
+      due_date: data.due_date || undefined,
+      description: data.description || undefined,
+    };
+    console.log('Payload create:', payload);
     try {
-      await createTask(data);
+      await createTask(payload);
       navigate('/tasks');
     } catch (error) {
       console.error('Error creating task:', error);

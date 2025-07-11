@@ -62,34 +62,42 @@ export default function LoginPage() {
     window.location.href = '/tasks'; // Redirect to tasks page
   };
   return (
-    <div className="login-container">
-      <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            className="input"
-            {...register('username')}
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Enter your username"
-          />
-          {errors.username && <p className="error">{errors.username.message}</p>}
+    <div className="login-page-wrapper">
+      <div className="login-container">
+        <div className="login-icon-wrapper">
+          <span className="login-icon">🔒</span>
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            className="input"
-            {...register('password')}
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter your password"
-          />
-          {errors.password && <p className="error">{errors.password.message}</p>}
-        </div>
-        <button className="btn btn-primary" type="submit">Login</button>
-      </form>
+        <h2 className="login-title">Login</h2>
+        <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+          <div className="form-group">
+            <label htmlFor="username">Username</label>
+            <input
+              className="input"
+              {...register('username')}
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              autoComplete="username"
+            />
+            {errors.username && <p className="error">{errors.username.message}</p>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              className="input"
+              {...register('password')}
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              autoComplete="current-password"
+            />
+            {errors.password && <p className="error">{errors.password.message}</p>}
+          </div>
+          <button className="btn btn-primary login-btn" type="submit">Login</button>
+        </form>
+      </div>
     </div>
   );
 }
