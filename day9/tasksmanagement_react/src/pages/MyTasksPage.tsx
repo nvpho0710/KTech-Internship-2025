@@ -26,8 +26,8 @@ export default function MyTasksPage() {
 
   console.log('OurTasksPage user', user);
   return (
-    <div className="table-container">
-      <table>
+    <div className="table-container my-tasks-table">
+      <table className="tasks-table">
         <thead>
           <tr>
             <th>ID</th>
@@ -43,7 +43,7 @@ export default function MyTasksPage() {
               <td>{task.id}</td>
               <td>{task.title}</td>
               <td>{task.description}</td>
-              <td>{task.status}</td>
+              <td><span className={`status-badge status-${task.status}`}>{task.status}</span></td>
               <td>{task.assignee_id}</td>
             </tr>
           ))}

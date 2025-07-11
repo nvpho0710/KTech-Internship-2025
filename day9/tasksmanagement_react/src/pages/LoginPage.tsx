@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import AuthContext from '../context';
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -22,7 +22,7 @@ const schema = yup
 
 export default function LoginPage() {
   const { setUser } = useContext(AuthContext);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // react form hook
   const {
@@ -62,11 +62,12 @@ export default function LoginPage() {
     window.location.href = '/tasks'; // Redirect to tasks page
   };
   return (
-    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh'}}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input
+            className="input"
             {...register('username')}
             type="text"
             id="username"
@@ -75,9 +76,10 @@ export default function LoginPage() {
           />
           {errors.username && <p className="error">{errors.username.message}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
+            className="input"
             {...register('password')}
             type="password"
             id="password"
@@ -86,7 +88,7 @@ export default function LoginPage() {
           />
           {errors.password && <p className="error">{errors.password.message}</p>}
         </div>
-        <button type="submit">Login</button>
+        <button className="btn btn-primary" type="submit">Login</button>
       </form>
     </div>
   );

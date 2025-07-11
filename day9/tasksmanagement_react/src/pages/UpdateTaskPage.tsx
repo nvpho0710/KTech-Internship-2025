@@ -111,16 +111,17 @@ export default function UpdateTaskPage() {
   };
 
   return (
-    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh'}}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
+    <div className="task-form-container">
+      <form className="task-form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="form-group">
           <label htmlFor="title">Title:</label>
-          <input {...register('title')} type="text" id="title" name="title" placeholder="Enter task title" />
+          <input className="input" {...register('title')} type="text" id="title" name="title" placeholder="Enter task title" />
           {errors.title && <p className="error">{errors.title.message}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="description">Description:</label>
           <input
+            className="input"
             {...register('description')}
             type="text"
             id="description"
@@ -129,37 +130,38 @@ export default function UpdateTaskPage() {
           />
           {errors.description && <p className="error">{errors.description.message}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="start_date">Start Date:</label>
-          <input {...register('start_date')} type="date" id="start_date" name="start_date" placeholder="YYYY-MM-DD" />
+          <input className="input" {...register('start_date')} type="date" id="start_date" name="start_date" placeholder="YYYY-MM-DD" />
           {errors.start_date && <p className="error">{errors.start_date.message}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="due_date">Due Date:</label>
-          <input {...register('due_date')} type="date" id="due_date" name="due_date" placeholder="YYYY-MM-DD" />
+          <input className="input" {...register('due_date')} type="date" id="due_date" name="due_date" placeholder="YYYY-MM-DD" />
           {errors.due_date && <p className="error">{errors.due_date.message}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="status">Status:</label>
-          <select {...register('status')} id="status" name="status">
+          <select className="input" {...register('status')} id="status" name="status">
             <option value="to_do">To Do</option>
             <option value="in_progress">In Progress</option>
             <option value="done">Done</option>
           </select>
           {errors.status && <p className="error">{errors.status.message}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="priority">Priority:</label>
-          <select {...register('priority')} id="priority" name="priority">
+          <select className="input" {...register('priority')} id="priority" name="priority">
             <option value="low">Low</option>
             <option value="medium">Medium</option>
             <option value="high">High</option>
           </select>
           {errors.priority && <p className="error">{errors.priority.message}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="assignee_id">Assignee ID:</label>
           <input
+            className="input"
             {...register('assignee_id')}
             type="text"
             id="assignee_id"
@@ -168,7 +170,7 @@ export default function UpdateTaskPage() {
           />
           {errors.assignee_id && <p className="error">{errors.assignee_id.message}</p>}
         </div>
-        <button type="submit">Update Task</button>
+        <button className="btn btn-primary" type="submit">Update Task</button>
       </form>
     </div>
   );

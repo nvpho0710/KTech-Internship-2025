@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 import SearchTasks from '../components/SearchTasks';
 
 export default function OurTasksPage() {
-  const { user } = useContext(AuthContext);
+  useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -59,8 +59,8 @@ export default function OurTasksPage() {
   return (
     <div>
       <SearchTasks onSearch={handleOnSearch} />
-      <div className="table-container">
-        <table>
+      <div className="table-container our-tasks-table">
+        <table className="tasks-table">
           <thead>
             <tr>
               <th>ID</th>
@@ -68,6 +68,7 @@ export default function OurTasksPage() {
               <th>Description</th>
               <th>Status</th>
               <th>Priority</th>
+              <th>Start Date</th>
               <th>Due Date</th>
               <th>Assignee</th>
               <th>Actions</th>
@@ -79,12 +80,13 @@ export default function OurTasksPage() {
                 <td>{task.id}</td>
                 <td>{task.title}</td>
                 <td>{task.description}</td>
-                <td>{task.status}</td>
-                <td>{task.priority}</td>
+                <td><span className={`status-badge status-${task.status}`}>{task.status.replace('_', ' ')}</span></td>
+                <td><span className={`priority-badge priority-${task.priority}`}>{task.priority}</span></td>
+                <td>{task.start_date ? new Date(task.start_date).toLocaleDateString() : ''}</td>
                 <td>{task.due_date ? new Date(task.due_date).toLocaleDateString() : ''}</td>
                 <td>{task.assignee_id}</td>
                 <td>
-                  <button style={{background:'#1976d2',color:'#fff',border:'none',borderRadius:4,padding:'0.25rem 0.75rem',cursor:'pointer'}} onClick={() => handleOnEdit(task.id)}>
+                  <button className="btn btn-edit" onClick={() => typeof task.id === 'number' && handleOnEdit(task.id)}>
                     Edit
                   </button>
                 </td>

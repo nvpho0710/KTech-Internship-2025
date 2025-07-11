@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router';
 import LoginPage from './pages/LoginPage';
 import OurTasksPage from './pages/OurTasksPage';
@@ -31,44 +31,37 @@ export default function TasksManagementGuidelines() {
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>
-      <div className="countainer mx-auto px-4 py-8">
-        <h1>Tasks Management Guidelines</h1>
-        {user && <p>Hi, {user?.email}</p>}
-
-        <BrowserRouter>
-          <nav className="mb-4">
-            <NavLink style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })} to="/tasks">
-              Tasks
-            </NavLink>
-            <span className="mx-2">|</span>
-            <NavLink style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })} to="/assignee-me">
-              My Tasks
-            </NavLink>
-            <span className="mx-2">|</span>
-            <NavLink style={({ isActive }) => ({ fontWeight: isActive ? 'bold' : 'normal' })} to="/create-task">
-              Create Task
-            </NavLink>
-            {user && (
-              <React.Fragment>
-                <span className="mx-2">|</span>
-                <button onClick={handleLogout}>Logout</button>
-              </React.Fragment>
-            )}
-          </nav>
+      <BrowserRouter>
+        <div className="header-bar">
+          <div className="header-left">
+            <span className="header-logo">✅</span>
+            <span className="header-title">Tasks Management</span>
+          </div>
+          <div className="header-right">
+            {user && <span className="user-info">{user.email}</span>}
+            <nav className="nav-list">
+              <NavLink className="nav-item" to="/tasks">Tasks</NavLink>
+              <NavLink className="nav-item" to="/assignee-me">My Tasks</NavLink>
+              <NavLink className="nav-item" to="/create-task">Create Task</NavLink>
+              {user && (
+                <button className="btn btn-logout nav-item" onClick={handleLogout}>Logout</button>
+              )}
+            </nav>
+          </div>
+        </div>
+        <div className="main-content">
           <Routes>
             <Route index element={<LoginPage />} />
             <Route path="/login" element={<LoginPage />} />
-
             {/* Private */}
             {user && <Route path="/tasks" element={<OurTasksPage />} />}
             {user && <Route path="/assignee-me" element={<MyTasksPage />} />}
             {user && <Route path="/create-task" element={<CreateTaskPage />} />}
             {user && <Route path="/update-task/:id" element={<UpdateTaskPage />} />}
-
             <Route path="/*" element={<AccessDeniedPage />} />
           </Routes>
-        </BrowserRouter>
-      </div>
+        </div>
+      </BrowserRouter>
     </AuthContext.Provider>
   );
 }

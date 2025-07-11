@@ -31,11 +31,11 @@ export default function SearchTasks({ onSearch }: Props) {
   };
 
   return (
-    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
+    <div className="search-tasks-container">
+      <form className="search-tasks-form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="form-group">
           <label htmlFor="status">Status:</label>
-          <select {...register('status')} id="status" name="status">
+          <select className="input" {...register('status')} id="status" name="status">
             <option value="">All Statuses</option>
             <option value="to_do">To Do</option>
             <option value="in_progress">In Progress</option>
@@ -43,9 +43,9 @@ export default function SearchTasks({ onSearch }: Props) {
           </select>
           {errors.status && <p className="error">{errors.status.message}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="priority">Priority:</label>
-          <select {...register('priority')} id="priority" name="priority">
+          <select className="input" {...register('priority')} id="priority" name="priority">
             <option value="">All Priorities</option>
             <option value="low">Low</option>
             <option value="medium">Medium</option>
@@ -54,7 +54,7 @@ export default function SearchTasks({ onSearch }: Props) {
           {errors.priority && <p className="error">{errors.priority.message}</p>}
         </div>
         <div>
-          <button type="submit">Search</button>
+          <button className="btn btn-primary" type="submit">Search</button>
         </div>
       </form>
     </div>
