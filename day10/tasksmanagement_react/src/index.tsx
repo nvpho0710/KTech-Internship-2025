@@ -40,7 +40,7 @@ export default function TasksManagementGuidelines() {
           <div className="header-right">
             {user && <span className="user-info">{user.email}</span>}
             <nav className="nav-list">
-              <NavLink className="nav-item" to="/tasks">Tasks</NavLink>
+              <NavLink className="nav-item" to="/tasks">Our Tasks</NavLink>
               <NavLink className="nav-item" to="/assignee-me">My Tasks</NavLink>
               <NavLink className="nav-item" to="/create-task">Create Task</NavLink>
               {user && (

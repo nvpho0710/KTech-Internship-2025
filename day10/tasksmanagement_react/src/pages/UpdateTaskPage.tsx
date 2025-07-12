@@ -101,8 +101,16 @@ export default function UpdateTaskPage() {
   }, [id, reset]);
 
   const onSubmit: SubmitHandler<IFormInput> = async (data: any) => {
+    // Chuyển assignee_id sang number nếu có, loại bỏ trường rỗng
+    const payload = {
+      ...data,
+      assignee_id: data.assignee_id ? Number(data.assignee_id) : undefined,
+      due_date: data.due_date || undefined,
+      description: data.description || undefined,
+    };
+    console.log('Payload update:', payload);
     try {
-      await updateTask(id ? parseInt(id) : 0, data);
+      await updateTask(id ? parseInt(id) : 0, payload);
       navigate('/tasks');
     } catch (error) {
       console.error('Error creating task:', error);

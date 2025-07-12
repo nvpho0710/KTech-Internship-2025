@@ -1,7 +1,5 @@
 import { useContext } from 'react';
 import AuthContext from '../context';
-// import { useNavigate } from 'react-router';
-
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -12,7 +10,6 @@ interface IFormInput {
   password: string;
 }
 
-// Validation schema using Yup
 const schema = yup
   .object({
     username: yup.string().email('Email is invalid').required('Email is required'),
@@ -20,11 +17,22 @@ const schema = yup
   })
   .required();
 
+// SVG avatar người mặc vest
+const AvatarSVG = () => (
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="60" cy="60" r="58" fill="#fff" stroke="#eee" strokeWidth="4"/>
+    <ellipse cx="60" cy="44" rx="24" ry="24" fill="#FFD600"/>
+    <path d="M36 98c0-13.255 10.745-24 24-24s24 10.745 24 24" fill="#26334D"/>
+    <rect x="48" y="70" width="24" height="18" rx="6" fill="#fff"/>
+    <path d="M60 70l-8 18h16l-8-18z" fill="#26334D"/>
+    <rect x="52" y="88" width="16" height="8" rx="2" fill="#F44336"/>
+    <rect x="56" y="88" width="8" height="8" rx="2" fill="#fff"/>
+    <rect x="56" y="88" width="4" height="8" rx="2" fill="#F44336"/>
+  </svg>
+);
+
 export default function LoginPage() {
   const { setUser } = useContext(AuthContext);
-  // const navigate = useNavigate();
-
-  // react form hook
   const {
     register,
     handleSubmit,
@@ -39,64 +47,59 @@ export default function LoginPage() {
   });
 
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-    console.log('Form submitted:', data);
-
-    // Call API to authenticate user
     const result = await login(data.username, data.password);
-    console.log('Login result:', result);
-
     const authenticatedUser = {
       id: result.loggedInUser.id,
       email: result.loggedInUser.email,
       access_token: result.access_token,
     };
-
     setUser(authenticatedUser);
-
-    // save user info to localStorage
     localStorage.setItem('user', JSON.stringify(authenticatedUser));
-
-    // save access token to localStorage
     localStorage.setItem('access_token', result.access_token);
-
-    window.location.href = '/tasks'; // Redirect to tasks page
+    window.location.href = '/tasks';
   };
+
   return (
-    <div className="login-page-wrapper">
-      <div className="login-container">
-        <div className="login-icon-wrapper">
-          <span className="login-icon">🔒</span>
+    <div className="login-mockup-outer-wrapper">
+      <div className="login-mockup-card">
+        <div className="login-mockup-avatar">
+          <div className="login-mockup-avatar-circle">
+            <AvatarSVG />
+          </div>
         </div>
-        <h2 className="login-title">Login</h2>
-        <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
-          <div className="form-group">
-            <label htmlFor="username">Username</label>
-            <input
-              className="input"
-              {...register('username')}
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Enter your username"
-              autoComplete="username"
-            />
-            {errors.username && <p className="error">{errors.username.message}</p>}
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              className="input"
-              {...register('password')}
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              autoComplete="current-password"
-            />
-            {errors.password && <p className="error">{errors.password.message}</p>}
-          </div>
-          <button className="btn btn-primary login-btn" type="submit">Login</button>
-        </form>
+        <div className="login-mockup-form">
+          <h2 className="login-mockup-title">User Login</h2>
+          <form className="login-mockup-form-inner" onSubmit={handleSubmit(onSubmit)}>
+            <div className="login-mockup-form-group login-mockup-form-group-rel">
+              <span className="login-mockup-icon-abs">📧</span>
+              <input
+                {...register('username')}
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Email Id"
+                autoComplete="username"
+                className="login-mockup-input login-mockup-input-pad"
+              />
+            </div>
+            {errors.username && <p className="login-mockup-error">{errors.username.message}</p>}
+            <div className="login-mockup-form-group login-mockup-form-group-rel">
+              <span className="login-mockup-icon-abs">🔒</span>
+              <input
+                {...register('password')}
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                autoComplete="current-password"
+                className="login-mockup-input login-mockup-input-pad"
+              />
+            </div>
+            {errors.password && <p className="login-mockup-error">{errors.password.message}</p>}
+            <button className="login-mockup-btn" type="submit">Login</button>
+          </form>
+          {/* <div className="login-mockup-forgot">Forgot Username / Password?</div> */}
+        </div>
       </div>
     </div>
   );
