@@ -1,0 +1,279 @@
+/* Remove Tailwind CSS directives */
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
+
+/* Import Ant Design styles */
+@import "antd/dist/reset.css";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa; /* Lighter gray background for the overall page */
+  margin: 0; /* Ensure no default body margin */
+}
+
+/* Custom styles for Ant Design components to match the screenshot */
+
+/* Adjust Ant Design Menu item padding and spacing */
+.ant-menu-item {
+  padding-left: 16px !important;
+  margin-bottom: 8px !important; /* Add some vertical spacing between menu items */
+}
+
+/* Ensure active menu item background and text color */
+.ant-menu-light .ant-menu-item-selected {
+  background-color: #e0f2fe !important; /* Light blue background */
+  color: #2563eb !important; /* Blue text color */
+}
+
+.ant-menu-light .ant-menu-item-selected .ant-menu-item-icon {
+  color: #2563eb !important; /* Blue icon color */
+}
+
+/* Adjust header height and background */
+.ant-layout-header {
+  height: 64px;
+  line-height: 64px;
+  background: #fff;
+  padding: 0 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Adjust content area background */
+.ant-layout-content {
+  background: #f8f9fa !important; /* Match the overall page background */
+}
+
+/* Override default Ant Design card padding if needed */
+.ant-card-body {
+  padding: 24px;
+}
+
+/* Chart.js specific styling to ensure it fits */
+canvas {
+  max-width: 100%;
+  height: 100% !important; /* Ensure canvas takes full height of its container */
+}
+
+/* Custom classes for elements that previously used Tailwind */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-4 {
+  gap: 16px; /* 4 * 4px = 16px */
+}
+
+.gap-2 {
+  gap: 8px; /* 2 * 4px = 8px */
+}
+
+.gap-small {
+  gap: 8px; /* Ant Design's default small gap */
+}
+
+.p-6 {
+  padding: 24px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.mb-8 {
+  margin-bottom: 32px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-5 {
+  height: 20px;
+}
+
+.w-5 {
+  width: 20px;
+}
+
+.h-4 {
+  height: 16px;
+}
+
+.w-4 {
+  width: 16px;
+}
+
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.text-xl {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-blue-600 {
+  color: #2563eb;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.text-gray-700 {
+  color: #374151;
+}
+
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.text-green-500 {
+  color: #22c55e;
+}
+
+.text-red-600 {
+  color: #dc2626;
+}
+
+.text-yellow-600 {
+  color: #d97706;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-gray-200 {
+  border-color: #e5e7eb;
+}
+
+.border-r {
+  border-right-width: 1px;
+}
+
+.border-r-0 {
+  border-right-width: 0;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-blue-100 {
+  background-color: #dbeafe;
+}
+
+.bg-red-100 {
+  background-color: #fee2e2;
+}
+
+.bg-yellow-100 {
+  background-color: #fef3c7;
+}
+
+.bg-green-100 {
+  background-color: #dcfce7;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem; /* 8px */
+}
+
+.rounded-md {
+  border-radius: 0.375rem; /* 6px */
+}
+
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.p-3 {
+  padding: 12px;
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+.min-h-200px {
+  min-height: 200px;
+}
+
+.h-\[250px\] {
+  height: 250px;
+}
+
+.space-y-2 > *:not([hidden]) ~ *:not([hidden]) {
+  margin-top: 8px;
+}
+
+.space-y-4 > *:not([hidden]) ~ *:not([hidden]) {
+  margin-top: 16px;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.p-0 {
+  padding: 0 !important; /* Override Ant Design default card padding */
+}
